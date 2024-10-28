@@ -1,7 +1,0 @@
-
-
-# Personal GitHub account
-Host github-personal
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/ssh-key
