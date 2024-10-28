@@ -12,7 +12,7 @@ const MovieDetails = () => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const response = await axios.get(`http://www.omdbapi.com/?i=${id}&apikey=86683180`);
+        const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=86683180`);
         setMovieDetails(response.data);
         setLoading(false);
       } catch (error) {
@@ -31,6 +31,8 @@ const MovieDetails = () => {
   if (!movieDetails) {
     return <p>Movie details not available</p>;
   }
+
+  console.log(movieDetails);
 
   return (
     <div className='container'>

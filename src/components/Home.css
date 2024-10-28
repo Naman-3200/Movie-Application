@@ -1,4 +1,3 @@
-
 @import '~font-awesome/css/font-awesome.css';
 
 body {
@@ -96,12 +95,15 @@ body {
   .search-bar {
     display: flex;
     align-items: center;
-    margin: 25px 0;
+    margin: 15px 0;
+    flex-wrap: wrap; 
   }
   
   .search-bar input[type="text"] {
-    width: 66rem;
-    padding: 10px;
+    flex: 1; 
+    min-width: 180px; 
+    max-width: 51rem; 
+    padding: 8px; 
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-right: 10px;
@@ -114,11 +116,25 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    flex-shrink: 0; 
   }
   
   .search-bar button:hover {
     background-color: darkred;
   }
+  
+  @media (max-width: 768px) {
+    .search-bar input[type="text"] {
+      width: 100%; 
+      margin: 0 0 10px 0; 
+    }
+    
+    .search-bar button {
+      width: 100%; 
+      padding: 10px; 
+    }
+  }
+  
   
   .movies-grid {
     display: flex;
